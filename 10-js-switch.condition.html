@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_Switch_Condition</title>
+</head>
+<body>
+    กรุณาใส่วันของสัปดาห์เป็นตัวเลข :
+    <input type="text" name="dayofweek" id="dayofweek">
+    <br>
+    <br>
+    <button onclick="click_submit()">Submit</button>
+    <br>
+    <br>
+    <p name="output" id="output"></p>
+
+
+    <script>
+
+        function click_submit() {
+            switch (document.getElementById('dayofweek').value) {
+                case '1':
+                    document.getElementById('output').innerHTML = 'วันจันทร์'
+                    break;
+                case '2':
+                    document.getElementById('output').innerHTML = 'วันอังคาร'
+                    break;
+                case '3':
+                    document.getElementById('output').innerHTML = 'วันพุธ'
+                    break;
+                case '4':
+                    document.getElementById('output').innerHTML = 'วันพฤหัสบดี'
+                    break;
+                case '5':
+                    document.getElementById('output').innerHTML = 'วันศุกร์'
+                    break;
+                case '6':
+                    document.getElementById('output').innerHTML = 'วันเสาร์'
+                    break;
+                case '7':
+                    document.getElementById('output').innerHTML = 'วันอาทิตย์'
+                    break;
+                default:
+                    alert('กรุณาป้อนตัวเลข 1 ถึง 7 เท่านั้น อย่าเสร่อค่ะ')
+                    break;
+            }
+                
+            document.getElementById('dayofweek').value = ''
+
+        }
+
+
+    </script>
+
+</body>
+</html>
