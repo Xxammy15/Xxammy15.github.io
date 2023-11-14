@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            $('head').load('head.html')
+            $('#menu').load('menu.html')
+            $('#foot').load('foot.html')
+        })
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Document</title>
+</head>
+<body class="background">
+    <div id="menu"></div>
+    
+    
+
+    
+      <div class="container mt-5">
+
+        <div class="row">
+            <div class="col-sm-6 mt-5">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">แบบฟอร์มบันทึกข้อมูลของครู</h5>
+                  <p class="card-text">
+                    <!--form-->
+                        <div class="mb-3">
+                          <label for="" class="form-label">ชื่อ-สกุล</label>
+                          <input type="text" class="form-control" id="name" >
+                          
+                        </div>
+       ;                 <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">อายุ</label>
+                          <input type="number" class="form-control" id="age">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" onclick="submit_click()">Submit</button>
+                        <button type="reset" class="btn btn-primary" onclick="reset_click()">Reset</button>
+                      <!--/form-->
+                  </p>
+                  <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6 mt-5">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Array</h5>
+                  <p class="card-text mt-3">
+                    <p id="output3"></p>
+
+                    
+                  </p>
+                  <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+                  <button type="submit" class="btn btn-primary" onclick="array_click()">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+       crossorigin="anonymous"></script>
+
+
+
+       <script>
+
+        const name = []
+        const age    = []
+
+
+          function submit_click() {
+            name.push(document.getElementById(name).value)
+            age.push(document.getElementById(age).value)
+
+            console.log(name)
+            console.log(age)
+
+            document.getElementById('name').value=''
+            document.getElementById('age').value=''
+          }
+
+          function reset_click(){
+
+            document.getElementById('name').value=''
+            document.getElementById('age').value=''
+
+
+          }
+       </script>
+       <script>
+        const fruit = ['Apple','Banana','Cherry','Durian']
+
+        function array_click() {
+
+            for (let i = 0; i < fruit.length; i++){
+                document.getElementById('output3').
+                innerHTML += fruit[i] + '<br>'
+
+            }
+            //document.getElementById('output3').innerHTML = fruit
+        }
+
+
+
+       </script>
+    <div id="foot"></div>
+</body>
+</html>
